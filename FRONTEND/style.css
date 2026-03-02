@@ -1,0 +1,72 @@
+@font-face {
+        font-family: Leotaro;
+        src: url(fonts/Leotaro-Regular.otf);
+        font-display: swap;
+    }
+
+* {
+    font-family: Leotaro;
+    box-sizing: border-box; /* Важно для правильной сетки */
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: #5baecd url('img/back.jpg')
+    no-repeat center top;
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+@keyframes borderOpacity{
+    from{background-color: rgba(0, 0, 0, 0); backdrop-filter: blur(0px);}
+    to{background-color: rgba(0, 0, 0, 0.523); backdrop-filter: blur(30px)}
+}
+
+
+.borderhead{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    justify-items: center;
+
+    backdrop-filter: blur(30px);
+
+    animation-name: borderOpacity; 
+    animation-timeline: scroll(root);
+    animation-range: 0 500px;
+    background-color: rgba(0, 0, 0, 0.523)
+}
+
+
+
+.info {
+    color: #071a20;
+    font-size: 40px;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.main{
+    font-size: 30px;
+    color:#032934;
+}
+
+a:-webkit-any-link {
+    color: #5baecd;
+    text-decoration: none;
+}
+
+/* a:-webkit-any-link:hover {
+    text-decoration:solid;
+} */
